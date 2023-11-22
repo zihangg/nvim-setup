@@ -80,7 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["aerial.nvim"] = {
-    config = { "\27LJ\2\nû\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\16filter_kind\1\v\0\0\nClass\nField\rVariable\16Constructor\tEnum\rFunction\14Interface\vModule\vMethod\vStruct\rbackends\1\3\0\0\15treesitter\blsp\1\0\3\16attach_mode\vglobal\23highlight_on_hover\2\14log_level\tinfo\nsetup\vaerial\frequire\0" },
+    config = { "\27LJ\2\nû\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\16filter_kind\1\v\0\0\nClass\nField\rVariable\16Constructor\tEnum\rFunction\14Interface\vModule\vMethod\vStruct\rbackends\1\3\0\0\15treesitter\blsp\1\0\3\14log_level\tinfo\16attach_mode\vglobal\23highlight_on_hover\2\nsetup\vaerial\frequire\0" },
     loaded = true,
     path = "/Users/zh/.local/share/nvim/site/pack/packer/start/aerial.nvim",
     url = "https://github.com/stevearc/aerial.nvim"
@@ -94,6 +94,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zh/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "/Users/zh/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/zh/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   harpoon = {
     loaded = true,
@@ -172,7 +182,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
-    config = { "\27LJ\2\nn\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\17open_mapping\n<c-`>\tsize\3\n\14direction\15horizontal\nsetup\15toggleterm\frequire\0" },
+    config = { "\27LJ\2\nn\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\14direction\15horizontal\17open_mapping\n<c-`>\tsize\3\n\nsetup\15toggleterm\frequire\0" },
     loaded = true,
     path = "/Users/zh/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
@@ -201,11 +211,11 @@ try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B
 time([[Config for nvim-autopairs]], false)
 -- Config for: aerial.nvim
 time([[Config for aerial.nvim]], true)
-try_loadstring("\27LJ\2\nû\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\16filter_kind\1\v\0\0\nClass\nField\rVariable\16Constructor\tEnum\rFunction\14Interface\vModule\vMethod\vStruct\rbackends\1\3\0\0\15treesitter\blsp\1\0\3\16attach_mode\vglobal\23highlight_on_hover\2\14log_level\tinfo\nsetup\vaerial\frequire\0", "config", "aerial.nvim")
+try_loadstring("\27LJ\2\nû\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\16filter_kind\1\v\0\0\nClass\nField\rVariable\16Constructor\tEnum\rFunction\14Interface\vModule\vMethod\vStruct\rbackends\1\3\0\0\15treesitter\blsp\1\0\3\14log_level\tinfo\16attach_mode\vglobal\23highlight_on_hover\2\nsetup\vaerial\frequire\0", "config", "aerial.nvim")
 time([[Config for aerial.nvim]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\nn\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\17open_mapping\n<c-`>\tsize\3\n\14direction\15horizontal\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+try_loadstring("\27LJ\2\nn\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\3\14direction\15horizontal\17open_mapping\n<c-`>\tsize\3\n\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
 
 _G._packer.inside_compile = false
