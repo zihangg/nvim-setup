@@ -10,3 +10,7 @@ vim.keymap.set('n', '<leader>f', function()
   		previewer = false,
     })
 end, { desc = '[/] Fuzzily search in current buffer' })
+
+require("telescope").setup({
+    defaults = { file_ignore_patterns = {"node_modules"} }
+})
