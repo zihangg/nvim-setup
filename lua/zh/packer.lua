@@ -12,14 +12,7 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-  use({ 
-	  'rose-pine/neovim', 
-	  as = 'rose-pine',
-	  config = function() vim.cmd('colorscheme rose-pine') 
-	  end
-  })
-
+  
   use({
 	'nvim-treesitter/nvim-treesitter', 
 	{ run = ':TSUpdate'}
@@ -62,5 +55,54 @@ return require('packer').startup(function(use)
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
   }
+
+  use ({
+      'folke/tokyonight.nvim'
+  })
+
+  use({
+      "stevearc/aerial.nvim",
+      config = function()
+          require("aerial").setup({
+              log_level = "info",
+              backends = { "treesitter", "lsp" },
+              highlight_on_hover = true,
+              attach_mode = "global",
+              filter_kind = {
+                  "Class",
+                  "Field",
+                  "Variable",
+                  "Constructor",
+                  "Enum",
+                  "Function",
+                  "Interface",
+                  "Module",
+                  "Method",
+                  "Struct",
+              },
+          })
+      end,
+  })
+  
+  use {
+      "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
+      requires = { 
+          "nvim-lua/plenary.nvim",
+          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+          "MunifTanjim/nui.nvim",
+          -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+      }
+  }
+
+  use 'famiu/bufdelete.nvim'
+  
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup({
+          direction = "horizontal",
+          size = 10,
+          open_mapping = [[<c-`>]],
+      })
+  end}
 
   end)
