@@ -109,4 +109,8 @@ return require('packer').startup(function(use)
       "stevearc/conform.nvim"
   })
 
+  use ({
+      "airblade/vim-gitgutter"
+  })
+
   end)
