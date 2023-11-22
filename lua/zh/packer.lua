@@ -12,9 +12,9 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  
+
   use({
-	'nvim-treesitter/nvim-treesitter', 
+	'nvim-treesitter/nvim-treesitter',
 	{ run = ':TSUpdate'}
   })
 
@@ -83,11 +83,11 @@ return require('packer').startup(function(use)
           })
       end,
   })
-  
+
   use {
       "nvim-neo-tree/neo-tree.nvim",
       branch = "v3.x",
-      requires = { 
+      requires = {
           "nvim-lua/plenary.nvim",
           "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
           "MunifTanjim/nui.nvim",
@@ -96,7 +96,7 @@ return require('packer').startup(function(use)
   }
 
   use 'famiu/bufdelete.nvim'
-  
+
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
       require("toggleterm").setup({
           direction = "horizontal",
@@ -118,4 +118,20 @@ return require('packer').startup(function(use)
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+
+  use {
+    "folke/todo-comments.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim"
+    },
+    config = function()
+      require("todo-comments").setup()
+    end
+  }
   end)
