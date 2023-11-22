@@ -1,12 +1,24 @@
 require("conform").setup({
-  formatters_by_ft = {
-    lua = { "stylua" },
-    -- Conform will run multiple formatters sequentially
-    python = { "isort", "black" },
-    -- Use a sub-list to run only the first available formatter
-    javascript = { { "prettierd", "prettier" } },
-    go = { "gofumpt" }
-  },
+   require("conform").setup({
+      formatters_by_ft = {
+        ["*"] = { "trim_whitespace", "trim_newlines" },
+        css = { "prettierd", "prettier" },
+        javascript = { "prettierd", "prettier" },
+        typescript = { "prettierd", "prettier" },
+        javascriptreact = { "prettierd", "prettier" },
+        typescriptreact = { "prettierd", "prettier" },
+        markdown = { "prettierd", "prettier" },
+        sh = { "shfmt" },
+        toml = { "taplo" },
+        yaml = { "yamlfmt" },
+        zsh = { "beautysh" },
+        go = { "gofumpt" }
+      },
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = "always",
+      },
+    })
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
