@@ -109,11 +109,4 @@ return require('packer').startup(function(use)
       "stevearc/conform.nvim"
   })
 
-  use ({
-      "lewis6991/gitsigns.nvim",
-      dependencies = {
-          "nvim-lua/plenary.nvim"
-      }
-  })
-
   end)
